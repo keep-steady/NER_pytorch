@@ -2,11 +2,13 @@
 
 Named Entity Recognition on CoNLL dataset using BiLSTM+CRF implemented with Pytorch
 
-paper : Neural Architectures for Named Entity Recognition
+paper
+- Neural Architectures for Named Entity Recognition
 
-        End-toEnd Sequence labeling via BLSTM-CNN-CRF
+- End-toEnd Sequence labeling via BLSTM-CNN-CRF
         
-code  : https://github.com/ZhixiuYe/NER-pytorch
+code
+- https://github.com/ZhixiuYe/NER-pytorch
 
 This code is customized so that i use latest Pytorch version(0.4.1) starting with https://github.com/ZhixiuYe/NER-pytorch
 
