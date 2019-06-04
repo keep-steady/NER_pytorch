@@ -10,6 +10,7 @@ paper
 code
 - https://github.com/ZhixiuYe/NER-pytorch
 
+
 This code is customized so that i use latest Pytorch version(0.4.1) starting with https://github.com/ZhixiuYe/NER-pytorch
 
 To use jupyter notebook to visualize the result, i transform ~.py into .ipynb
