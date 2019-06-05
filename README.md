@@ -29,12 +29,34 @@ To get pre-trained word embedding vector Glove
    
 ## 1. train
 150 epoch is enough, 24h with oneP100 GPU, 51 epoch has best f1 score, i use visdom
+### model shape
+1) word embedding with Glove(100d) + charactor embedding with CNN(25d)
+2) BiLSTM 1 layer + Highway
+3) Linear 400d -> 19d with tanh
+
+        BiLSTM_CRF(
+                  (char_embeds): Embedding(85, 25)
+                  (char_cnn3): Conv2d(1, 25, kernel_size=(3, 25), stride=(1, 1), padding=(2, 0))
+                  (word_embeds): Embedding(400176, 100)
+                  (dropout): Dropout(p=0.5)
+                  (lstm): LSTM(125, 200, bidirectional=True)
+                  (hw_trans): Linear(in_features=25, out_features=25, bias=True)
+                  (hw_gate): Linear(in_features=25, out_features=25, bias=True)
+                  (h2_h1): Linear(in_features=400, out_features=200, bias=True)
+                  (tanh): Tanh()
+                  (hidden2tag): Linear(in_features=400, out_features=19, bias=True)
+        )
 
    run 1. train.ipynb
 
 ## 2. evaluation
    run 2. evaluation.ipynb
  
+## Result
+
+
+
+
 
 ## data
 https://www.clips.uantwerpen.be/conll2003/ner/
