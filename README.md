@@ -53,7 +53,7 @@ To get pre-trained word embedding vector Glove
    run 2. evaluation.ipynb
  
 ## Result
-
+![ex_screenshot](./result.png)
 
 
 
